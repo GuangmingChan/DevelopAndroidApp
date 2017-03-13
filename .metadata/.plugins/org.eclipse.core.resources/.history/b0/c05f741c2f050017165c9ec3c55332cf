@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="email"
+        android:text="@string/email" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/pikaqiu"
+        android:text="带图像的文本" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#f00"
+        android:text="EditText是开发中比较常用的组件，比如说登录界面..." />
+    
+    <TextView
+        android:id="@+id/tvSingle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="#0f0"
+        android:textSize="30sp"
+        android:text="EditText是开发中比较常用的组件，比如说登录界面..." 
+        />
+
+</LinearLayout>

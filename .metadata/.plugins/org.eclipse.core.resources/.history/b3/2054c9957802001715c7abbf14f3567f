@@ -1,0 +1,36 @@
+package com.helloclass;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+
+public class HelloClassActivity extends Activity {
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        Log.i("MainActivity", "***onCreate()***");
+    }
+    
+    @Override
+    protected void onStart(){
+    	super.onStart();
+    	Log.i("MainActivity", "***onStart()***");
+    }
+    
+    @Override
+    protected void onResume(){
+    	super.onResume();
+    	Log.i("MainActivity", "***onResume()***");
+    }
+    
+    @Override
+    protected void onPause(){
+    	super.onPause();
+    	Log.i("MainActivity", "***onPause()***");
+    }
+    
+
+    
+}

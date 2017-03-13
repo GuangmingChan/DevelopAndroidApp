@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textColor="#ee9135"
+        android:textSize="25sp"
+        android:text="请输入密码：" />
+
+    <EditText
+        android:id="@+id/etPwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码"
+        android:textColor="#6b6968"
+        android:layout_below="@+id/textView1"
+        android:inputType="textPassword" >
+    </EditText>
+
+    <Button
+        android:id="@+id/btCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/etPwd"
+        android:layout_marginTop="20dp"
+        android:text="取消" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPwd"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/btCancel"
+        android:onClick="myClick"
+        android:text="登录" />
+
+</RelativeLayout>

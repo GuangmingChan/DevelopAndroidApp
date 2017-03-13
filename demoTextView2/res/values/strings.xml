@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DemoEditText2</string>
+    <string name="hello">Hello World, DemoEditText2Activity!</string>
+	<string name="email">联系邮箱：mingtran@qq.com</string>
+</resources>
