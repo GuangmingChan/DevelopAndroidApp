@@ -1,0 +1,21 @@
+package com.mingsoft;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.CheckBox;
+
+public class DemoCheckBox2Activity extends Activity {
+    /** Called when the activity is first created. */
+	private CheckBox physic = null;
+	private CheckBox music = null;
+	private CheckBox paint = null;
+	private Button btsub = null;
+	
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+    }
+    
+}

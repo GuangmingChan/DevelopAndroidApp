@@ -1,0 +1,18 @@
+package com.mingsoft;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class DemoRadioButtonActivity extends Activity {
+    /** Called when the activity is first created. */
+	private int softRadId = null;
+	private int testRadId = null;
+	private int gameRadId = null;
+	private int techRadId = null;
+	private int groupRadId = null;
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+    }
+}

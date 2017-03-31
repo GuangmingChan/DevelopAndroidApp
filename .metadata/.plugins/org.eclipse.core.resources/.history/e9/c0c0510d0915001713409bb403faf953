@@ -1,0 +1,70 @@
+package com.mingsoft;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.Toast;
+
+public class DemoCheckBox3Activity extends Activity {
+    /** Called when the activity is first created. */
+	public String str = "";
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        
+        final CheckBox chbSport=(CheckBox)findViewById(R.id.sport);
+        final CheckBox chbMusic=(CheckBox)findViewById(R.id.music);
+        final CheckBox chbPaint=(CheckBox)findViewById(R.id.painting);
+        OnCheckedChangeListener listener = new CompoundButton.OnCheckedChangeListener() {		
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				// TODO Auto-generated method stub
+				String strCheck = buttonView.getText().toString();
+				if(buttonView.isChecked()){
+					str += strCheck +" ";
+					showText(str);
+				}
+				else
+				{
+
+					str = str.replaceAll(strCheck, "");
+					showText(str)
+				}
+				
+			}
+		};
+        chbSport.setOnCheckedChangeListener(listener);
+        chbMusic.setOnCheckedChangeListener(listener);
+        chbPaint.setOnCheckedChangeListener(listener);
+        
+        Button bt = (Button)findViewById(R.id.btsubmit);
+        bt.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				String str="";
+				if(chbSport.isChecked()){
+					str += chbSport.getText().toString()+" ";
+				}
+				if(chbMusic.isChecked()){
+					str += chbMusic.getText().toString()+" ";
+				}
+				if(chbPaint.isChecked()){
+					str += chbPaint.getText().toString()+" ";
+				}				
+				showText(str);
+			}
+		});
+    }
+    
+    public void showText(String str){
+		Toast toast = Toast.makeText(this, "ÄãµÄ°®ºÃÊÇ "+str, Toast.LENGTH_SHORT);
+		toast.show();
+	}
+}

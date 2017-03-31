@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+<!-- 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="1.你更喜欢哪种水果？" />
+    
+    <RadioGroup 
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <RadioButton 
+            android:id="@+id/rdbt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:paddingLeft="25dp"
+            android:text="A.草莓"
+            />
+        <RadioButton 
+            android:id="@+id/rdbt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:paddingLeft="25dp"
+            android:text="B.苹果"
+            />
+        <RadioButton 
+            android:id="@+id/rdbt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:paddingLeft="25dp"
+            android:text="C.西瓜"
+            />
+        <RadioButton 
+            android:id="@+id/rdbt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:paddingLeft="25dp"
+            android:text="D.菠萝"
+            />
+        <RadioButton 
+            android:id="@+id/rdbt5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:paddingLeft="25dp"
+            android:text="E.橘子"
+            />
+    </RadioGroup>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="2.你平时休闲经常去什么地方？" />
+ -->
+ 	<TextView
+ 	    android:id="@+id/tv1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="提前提醒时间：" />
+ 	
+ 	<RadioGroup 
+ 	    android:id="@+id/radgrp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >   
+        <RadioButton 
+            android:id="@+id/rdbt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5分钟"
+            />
+
+        <RadioButton
+            android:id="@+id/rdbt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30分钟" />
+
+        <RadioButton
+            android:id="@+id/rdbt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="checkingstyle"
+            android:text="60分钟" />
+ 	</RadioGroup>
+
+ 	<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="提醒模式：" />
+
+ 	<CheckBox
+        android:id="@+id/chebox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="声音" />
+ 	<CheckBox
+        android:id="@+id/chebox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="震动" />
+ 	<Button 
+ 	    android:id="@+id/btok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="确定"/>
+</LinearLayout>

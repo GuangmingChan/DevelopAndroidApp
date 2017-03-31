@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:columnCount="6"
+    android:orientation="horizontal"
+    android:background="#fff"
+    android:rowCount="4" >
+
+    <!-- 第一行 -->
+
+    <ImageView
+        android:src="@drawable/message1" 
+        android:layout_column="1"
+        android:layout_columnSpan="4"
+        android:layout_row="0"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <ImageView
+        android:src="@drawable/tou1" 
+        android:layout_marginTop="20dp"
+        android:layout_column="5"
+        android:layout_row="0"
+        />
+    <!-- 第二行 -->
+    <ImageView 
+        android:src="@drawable/tou2"
+        android:layout_row="1"
+        android:layout_column="0"       
+        />
+    <ImageView 
+        android:src="@drawable/message2"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:layout_columnSpan="4"
+        />
+    <!-- 第三行 -->
+    
+   <ImageView
+        android:layout_column="1"
+        android:layout_row="2"
+        android:layout_columnSpan="4"
+        android:src="@drawable/message3" />
+
+    <ImageView
+        android:layout_column="5"   
+        android:layout_row="2"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/tou1" />
+    
+    <!-- 第二行 -->
+    <ImageView 
+        android:src="@drawable/tou2"
+        android:layout_row="3"
+        android:layout_column="0"       
+        />
+    <ImageView 
+        android:src="@drawable/message4"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:layout_columnSpan="4"
+        />
+
+</GridLayout>

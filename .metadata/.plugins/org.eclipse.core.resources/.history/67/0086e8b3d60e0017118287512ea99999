@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+    
+    <EditText
+        android:id="@+id/acount"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:hint="请输入账号"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        />
+    <EditText 
+        android:id="@+id/etPass"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:hint="请输入密码"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        />
+
+    <ImageButton
+        android:id="@+id/btlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/"
+        android:text="登陆" />
+
+    <Button
+        android:id="@+id/btCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取消" />
+    
+</LinearLayout>

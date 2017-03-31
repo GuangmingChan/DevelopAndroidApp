@@ -1,0 +1,7 @@
+package com.mingsoft;
+
+import View.OnClickListener;
+
+public class BtCListener extends OnClickListener {
+
+}

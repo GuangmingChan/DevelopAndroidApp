@@ -1,0 +1,45 @@
+package com.mingsoft;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
+public class DemoRingActivity extends Activity {
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        
+        RadioGroup radGrp = (RadioGroup)findViewById(R.id.radgrp);  
+        radGrp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+			
+			@Override
+			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				// TODO Auto-generated method stub
+				RadioButton bt = (RadioButton)findViewById(checkedId);
+				showText("提前提醒时间为"+bt.getText().toString());
+			}
+		});
+        
+        CheckBox chbx1=(CheckBox)findViewById(R.id.chebox1);
+        CheckBox chbx2=(CheckBox)findViewById(R.id.chebox2);
+        chbx1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+        
+    }
+    
+    public void showText(String str){
+    	Toast.makeText(DemoRingActivity.this, "您选中了"+str, Toast.LENGTH_SHORT).show();
+    }
+}

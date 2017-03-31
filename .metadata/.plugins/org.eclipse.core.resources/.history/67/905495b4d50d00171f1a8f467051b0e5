@@ -1,0 +1,65 @@
+package com.mingsoft;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+
+public class DemoCheckBox2Activity extends Activity {
+    /** Called when the activity is first created. */
+	private CheckBox physic = null;
+	private CheckBox music = null;
+	private CheckBox paint = null;
+	private Button btsub = null;
+    private OnCheckedChangeListener checklistener = new CompoundButton.OnCheckedChangeListener(){
+    	@Override
+    	public void onCheckedChanged(CompoundButton btview, boolean isChecked){
+    		if(btview.isChecked()){
+    			Log.i("activity", "ƒ„—°÷–¡À"+btview.getText().toString());
+    		}
+    	}
+    	
+    };
+	
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        
+        physic = (CheckBox)findViewById(R.id.physical);
+        music = (CheckBox)findViewById(R.id.music);
+        paint = (CheckBox)findViewById(R.id.painting);
+        
+        btsub = (Button)findViewById(R.id.subm);
+        
+        physic.setOnCheckedChangeListener(checklistener);
+        music.setOnCheckedChangeListener(checklistener);
+        paint.setOnCheckedChangeListener(checklistener);
+        
+        btsub.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				String str = "";
+				if(physic.isChecked()){
+					str += physic.getText().toString();
+				}
+				if(music.isChecked()){
+					str += music.getText().toString();
+				}
+				
+				if(paint.isChecked()){
+					str += paint.getText().toString();
+				}
+			}
+		});       
+        
+    }
+    
+}

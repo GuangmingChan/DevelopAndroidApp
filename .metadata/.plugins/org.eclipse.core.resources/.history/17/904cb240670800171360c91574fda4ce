@@ -1,0 +1,33 @@
+package com.mingsoft;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+
+public class DemoRadioButton2Activity extends Activity {
+    /** Called when the activity is first created. */
+	private RadioGroup rg = null;
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        
+        RadioButton softEngBt = (RadioButton)findViewById(R.id.softEng);
+        RadioButton gameBt = (RadioButton)findViewById(R.id.gameDes);
+        RadioButton testBt = (RadioButton)findViewById(R.id.testEng);
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+			
+			@Override
+			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				// TODO Auto-generated method stub
+				RadioButton rbt = null;
+				switch(checkedId){
+				case R.id.softEng:
+					showText(softEngBt.getText().toString());
+					break;
+				}
+			}
+		});
+    }
+}

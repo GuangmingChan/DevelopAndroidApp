@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.mingsoft.DemoEditText3Activity&apos; to &apos;DemoButton2Activity&apos;&#x0D;&#x0A;- Original project: &apos;demoButton2&apos;&#x0D;&#x0A;- Original element: &apos;com.mingsoft.DemoEditText3Activity&apos;&#x0D;&#x0A;- Renamed element: &apos;com.mingsoft.DemoButton2Activity&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DemoEditText3Activity&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.mingsoft{DemoEditText3Activity.java[DemoEditText3Activity" matchStrategy="1" name="DemoButton2Activity" qualified="false" references="true" similarDeclarations="false" stamp="1489380292330" textual="false" version="1.0"/>
+</session>

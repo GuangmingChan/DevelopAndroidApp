@@ -1,0 +1,20 @@
+package com.mingsoft;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageView;
+
+public class DemoImageView3Activity extends Activity {
+    /** Called when the activity is first created. */
+    private ImageView imgv = null;
+    private Button bt = null;
+    private int imgid = R.drawable.ic_launcher;
+	@Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        
+        
+    }
+}

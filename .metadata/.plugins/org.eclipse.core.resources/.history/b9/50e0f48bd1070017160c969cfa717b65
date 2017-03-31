@@ -1,0 +1,40 @@
+package com.mingsoft;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
+public class DemoRadioButtonActivity extends Activity {
+    /** Called when the activity is first created. */
+	private RadioButton softRadBt = null;
+	private RadioButton testRadBt = null;
+	private RadioButton gameRadBt = null;
+	private RadioButton techRadBt = null;
+	private RadioGroup groupRad = null;
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        softRadBt = (RadioButton)findViewById(R.id.softwareEng);
+        testRadBt = (RadioButton)findViewById(R.id.testEng);
+        gameRadBt = (RadioButton)findViewById(R.id.gameDes);
+        techRadBt = (RadioButton)findViewById(R.id.techSupt);
+        groupRad = (RadioGroup)findViewById(R.id.profRG);
+        
+        groupRad.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
+        	@Override
+        	public void onCheckedChanged(RadioGroup group, int checkedId){
+        		switch(checkedId){
+        		case R.id.softwareEng:
+        			break;
+        			Toast.makeText(DemoRadioButtonActivity.this, "您选择的工作是"+softRadBt.getText(), Toast.LENGTH_SHORT).show();
+        		case R.id.testEng:
+        			break;
+        		}
+        	}
+        		
+        });
+    }
+}

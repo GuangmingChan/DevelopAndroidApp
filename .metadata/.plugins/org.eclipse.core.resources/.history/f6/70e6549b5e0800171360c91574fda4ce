@@ -1,0 +1,31 @@
+package com.mingsoft;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
+public class DemoImageButton2Activity extends Activity {
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        
+        ImageButton imbt = (ImageButton)findViewById(R.id.imbt1);
+        imbt.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+    }
+    
+    public void myClick(View v){
+    	Toast toast = Toast.makeText(DemoImageButton2Activity.this, "单击第一个imagebutton", Toast.LENGTH_SHORT);
+    	toast.show();
+    }
+}

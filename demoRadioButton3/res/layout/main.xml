@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup 
+        android:id="@+id/radgrp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <RadioButton
+            android:id="@+id/softEng"
+            android:text="软件工程师"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <RadioButton 
+            android:id="@+id/gamePlan"
+            android:text="游戏策划"
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />       
+        <RadioButton 
+            android:id="@+id/testEng"
+            android:text="测试工程师"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        
+        <RadioButton 
+            android:id="@+id/techSupport"
+            android:text="技术支持"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <RadioButton 
+            android:id="@+id/operation"
+            android:text="运营专员"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RadioGroup>
+
+</LinearLayout>

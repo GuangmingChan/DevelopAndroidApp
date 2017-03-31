@@ -1,0 +1,72 @@
+package com.mingsoft;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
+public class DemoRadioButtonActivity extends Activity {
+    /** Called when the activity is first created. */
+	private RadioButton softRadBt = null;
+	private RadioButton testRadBt = null;
+	private RadioButton gameRadBt = null;
+	private RadioButton techRadBt = null;
+	private RadioButton operRadBt = null;
+	private RadioGroup groupRad = null;
+	
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        softRadBt = (RadioButton)findViewById(R.id.softwareEng);
+        testRadBt = (RadioButton)findViewById(R.id.testEng);
+        gameRadBt = (RadioButton)findViewById(R.id.gameDes);
+        techRadBt = (RadioButton)findViewById(R.id.techSupt);
+        operRadBt = (RadioButton)findViewById(R.id.operationer);
+        groupRad = (RadioGroup)findViewById(R.id.profRG);
+        /*
+        groupRad.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
+        	@Override
+        	public void onCheckedChanged(RadioGroup group, int checkedId){
+        		switch(checkedId){
+        		case R.id.softwareEng:
+        			showText(softRadBt.getText().toString());
+        			break;
+        		case R.id.testEng:
+        			showText(testRadBt.getText().toString());
+        			break;
+        		case R.id.gameDes:
+        			showText(gameRadBt.getText().toString());
+        			break;
+        		case R.id.techSupt:
+        			showText(techRadBt.getText().toString());
+        			break;
+        		case R.id.operationer:
+        			showText(operRadBt.getText().toString());
+        			break;
+        		}
+        	}	
+        });
+        */
+        Button bt = (Button)findViewById(R.id.btsubmit);
+        bt.setOnClickListener(new View.OnClickListener() {	
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				for(int i = 0; i < groupRad.getChildCount(); i ++){
+					RadioButton rb = (RadioButton)groupRad.getChildAt(i);
+					if(rb.isChecked()){
+						showText(rb.getText().toString());
+					}
+				}
+			}
+		});
+    }
+    
+    public void showText(String str){
+    	Toast.makeText(DemoRadioButtonActivity.this, "您选择的工作是:"+str, Toast.LENGTH_SHORT).show();
+    }
+}
